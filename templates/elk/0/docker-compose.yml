@@ -1,7 +1,7 @@
 version: '2'
 services:
     jhipster-elasticsearch:
-        build: jhipster-elasticsearch/ 
+        build: https://github.com/diogoarm/jhipster-console/blob/master/jhipster-elasticsearch/Dockerfile
         ports:
             - "9200:9200"
             - "9300:9300"
@@ -17,7 +17,7 @@ services:
                 soft: 65536
                 hard: 65536    
     jhipster-logstash:
-        build: jhipster-logstash/
+        build: https://github.com/diogoarm/jhipster-console/blob/master/jhipster-logstash/Dockerfile
         # Uncomment to have logstash config loaded from a volume
         #volumes:
         #    - ./jhipster-logstash/conf/:/conf
@@ -25,7 +25,7 @@ services:
         ports:
             - "5000:5000/udp"
     jhipster-console:
-        build: jhipster-console/
+        build: https://github.com/diogoarm/jhipster-console/blob/master/jhipster-console/Dockerfile
         ports:
             - "5601:5601"
         environment:
