@@ -3,3 +3,30 @@
   version: "1" # Version of the versioned template of the Catalog Entry
   description: "Elastic Search, Logstash and Kibana Stack" # Description of the versioned template of the Catalog Entry
   uuid: elk-stack-1 # Unique identifier to be used for upgrades. Please see note.
+
+jhipster-elasticsearch:
+  health_check:
+    request_line: GET /health HTTP/1.0
+    port: 9200
+    interval: 2000
+    response_timeout: 2000
+    unhealthy_threshold: 3
+    healthy_threshold: 2
+
+jhipster-logstash:
+  health_check:
+    request_line: GET /health HTTP/1.0
+    port: 5000
+    interval: 2000
+    response_timeout: 2000
+    unhealthy_threshold: 3
+    healthy_threshold: 2   
+
+jhipster-console:
+  health_check:
+    request_line: GET /health HTTP/1.0
+    port: 5601
+    interval: 2000
+    response_timeout: 2000
+    unhealthy_threshold: 3
+    healthy_threshold: 2         
