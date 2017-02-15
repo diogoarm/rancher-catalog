@@ -7,9 +7,30 @@
 
 jhipster-elasticsearch:
   scale: 1
+  health_check:
+    request_line: GET /health HTTP/1.0
+    port: 4001
+    interval: 2000
+    response_timeout: 2000
+    unhealthy_threshold: 3
+    healthy_threshold: 2
 
 jhipster-logstash:
   scale: 1
+  health_check:
+    request_line: GET /health HTTP/1.0
+    port: 4001
+    interval: 2000
+    response_timeout: 2000
+    unhealthy_threshold: 3
+    healthy_threshold: 2
 
 jhipster-console:
-  scale: 1    
+  scale: 1
+  health_check:
+    request_line: GET /health HTTP/1.0
+    port: 4001
+    interval: 2000
+    response_timeout: 2000
+    unhealthy_threshold: 3
+    healthy_threshold: 2    
