@@ -1,5 +1,5 @@
-name: elk # Name of the Catalog Entry
+name: Elk Stack 
 description: |
-  ELK Stack # Description of the Catalog Entry
-version: 1 # Version of the Catalog to be used
-category: monitoring # Category to be used for searching catalog entries
+  ELK Stack
+version: 1.0
+category: Logging
